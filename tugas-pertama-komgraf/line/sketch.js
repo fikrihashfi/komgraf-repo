@@ -11,19 +11,38 @@ function setup() {
 
 function draw() {
   background(255);
+  drawGrid();
+  drawXY();
   drawLine();
 }
 
 function drawLine() {
+  translate(600,275);
   var i = 1;
   for (var i = 1; i <= totalLine; i++) {
     let x1 = document.getElementById('x1-' + i);
     let y1 = document.getElementById('y1-' + i);
     let x2 = document.getElementById('x2-' + i);
     let y2 = document.getElementById('y2-' + i);
-    line(x1.value, 550 - y1.value, x2.value, 550 - y2.value);
-    console.log("gambar ke - " + i);
+    line(x1.value,-y1.value, x2.value,-y2.value);
   }
+}
+
+function drawGrid() {
+  for (var i = 25; i < 1200; i += 25) {
+    strokeWeight(0.4);
+    line(0, i, 1200, i);
+    line(i, 0, i, 550);
+  }
+}
+
+function drawXY() {
+  strokeWeight(2);
+  translate(600, 0);
+  line(0, 0, 0, 550)
+  translate(-600,275);
+  line(0,0,1200,0);
+  translate(0,-275);
 }
 
 function addLine() {
@@ -45,9 +64,9 @@ function handler() {
     let y1 = document.getElementById('y1-' + i);
     let x2 = document.getElementById('x2-' + i);
     let y2 = document.getElementById('y2-' + i);
-    x1.value = Math.abs(x1.value) % 1200;
-    y1.value = Math.abs(y1.value) % 550;
-    x2.value = Math.abs(x2.value) % 1200;
-    y2.value = Math.abs(y2.value) % 550;
+    x1.value = x1.value % 600;
+    y1.value = y1.value % 275;
+    x2.value = x2.value % 600;
+    y2.value = y2.value % 275;
   }
 }
