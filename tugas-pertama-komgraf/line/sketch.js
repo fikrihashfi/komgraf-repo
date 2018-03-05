@@ -25,6 +25,10 @@ function drawLine() {
     let x2 = document.getElementById('x2-' + i);
     let y2 = document.getElementById('y2-' + i);
     line(x1.value,-y1.value, x2.value,-y2.value);
+    if(x1.value && y1.value && x2.value && y2.value){
+      text("("+x1.value +","+y1.value+")",x1.value,-y1.value);
+      text("("+x2.value +","+y2.value+")",x2.value,-y2.value);
+    }
   }
 }
 
