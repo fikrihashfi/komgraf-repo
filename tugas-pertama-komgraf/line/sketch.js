@@ -1,8 +1,5 @@
-function runThisPlease() {
-  var scale = 'scale(0.9)';
-  document.body.style.webkitTransform = scale; // Chrome, Opera, Safari
-  document.body.style.msTransform = scale; // IE 9
-  document.body.style.transform = scale; // General
+function unZoom() {
+  document.body.style.zoom = "90%";
 }
 
 var totalLine = 1;
