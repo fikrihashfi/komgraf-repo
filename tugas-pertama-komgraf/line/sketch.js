@@ -1,3 +1,10 @@
+function runThisPlease() {
+  var scale = 'scale(0.9)';
+  document.body.style.webkitTransform = scale; // Chrome, Opera, Safari
+  document.body.style.msTransform = scale; // IE 9
+  document.body.style.transform = scale; // General
+}
+
 var totalLine = 1;
 
 function setup() {
@@ -26,13 +33,8 @@ function addLine() {
   totalLine += 1;
   var div = document.createElement('div');
   div.className = 'coordinate-card flex';
-  var html = '<h1>Coordinate</h1>' +
-             '<div class="coordinate-wrapper flex">' +
-             '<input id="x1-' + totalLine + '" type="number" value="" placeholder="Coordinate x1" onblur="handler()">' +
-             '<input id="y1-' + totalLine + '" type="number" value="" placeholder="Coordinate y1" onblur="handler()">' +
-             '<input id="x2-' + totalLine + '" type="number" value="" placeholder="Coordinate x2" onblur="handler()">' +
-             '<input id="y2-' + totalLine + '" type="number" value="" placeholder="Coordinate y2" onblur="handler()">';
- div.innerHTML = html;
+  var html = '<h1>Coordinate</h1>' + '<div class="coordinate-wrapper flex">' + '<input id="x1-' + totalLine + '" type="number" value="" placeholder="Coordinate x1" onblur="handler()">' + '<input id="y1-' + totalLine + '" type="number" value="" placeholder="Coordinate y1" onblur="handler()">' + '<input id="x2-' + totalLine + '" type="number" value="" placeholder="Coordinate x2" onblur="handler()">' + '<input id="y2-' + totalLine + '" type="number" value="" placeholder="Coordinate y2" onblur="handler()">';
+  div.innerHTML = html;
   document.getElementById('line-container').appendChild(div);
 }
 
