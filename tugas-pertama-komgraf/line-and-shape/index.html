@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=2">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Tugas Pertama Komgraf</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+  <!-- P5 Library -->
+  <script src="../libraries/p5.js"></script>
+  <script src="../libraries/p5.dom.js"></script>
+  <script src="../libraries/p5.sound.js"></script>
+
+  <!-- Resource js -->
+  <script type="text/javascript" src="js/line.js"></script>
+
+  <!-- Handler.js -->
+  <script type="text/javascript" src=handler.js></script>
+
+  <!-- P5 Sketch -->
+  <script src="sketch.js"></script>
+
+  <!-- Eksternal Css -->
+  <link rel="stylesheet" href="css/master.css">
+
+  <!-- Bootstrap Css CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+  <!-- Material Icon -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="flex">
+
+  <div id="header-container" class="flex">
+    <div class="caption flex">
+      <h1 class="caption-value">Garis Dan Bentuk</h1>
+    </div>
+    <div class="separator">
+    </div>
+  </div>
+
+  <div id="canvas-container" class="flex">
+    <div id="canvas">
+    </div>
+  </div>
+
+  <div class="separator separator-luar">
+  </div>
+
+  <div id="item-container" class="flex">
+
+    <div id="line-card" class="flex">
+      <h2 class="card-caption">Line 1</h2>
+      <div class="separator-card">
+      </div>
+      <div class="line-input-container flex">
+        <input id="line-x1-1" type="number" name="" value="" placeholder="Coordinate x1">
+        <input id="line-y1-1" type="number" name="" value="" placeholder="Coordinate y1">
+        <input id="line-x2-1" type="number" name="" value="" placeholder="Coordinate x2">
+        <input id="line-y2-1" type="number" name="" value="" placeholder="Coordinate y2">
+      </div>
+      <div class="separator-card">
+      </div>
+      <button id="line-1" type="button" class="btn active btn-custom" onclick="drawLine(this.id)"><code class="button-caption">DRAW</code></button>
+    </div>
+
+    <div id="polygon-card" class="flex">
+      <h2 class="card-caption">Polygon 1</h2>
+      <div class="separator-card">
+      </div>
+      <div class="polygon-input-container flex">
+        <input id="poly-x1-1" type="number" name="" value="" placeholder="Coordinate x1">
+        <input id="poly-y1-1" type="number" name="" value="" placeholder="Coordinate y1">
+        <input id="poly-x2-1" type="number" name="" value="" placeholder="Coordinate x2">
+        <input id="poly-y2-1" type="number" name="" value="" placeholder="Coordinate y2">
+        <input id="poly-x3-1" type="number" name="" value="" placeholder="Coordinate x3">
+        <input id="poly-y3-1" type="number" name="" value="" placeholder="Coordinate y3">
+        <input id="poly-x4-1" type="number" name="" value="" placeholder="Coordinate x4">
+        <input id="poly-y4-1" type="number" name="" value="" placeholder="Coordinate y4">
+      </div>
+      <div class="separator-card">
+      </div>
+      <button id="poly-1" type="button" class="btn active btn-custom" onclick="drawPoly(this.id)"><code class="button-caption">DRAW</code></button>
+    </div>
+
+  </div>
+
+  <div id="container-floating">
+    <div class="nd3 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addLine()">
+      <i class="material-icons">timeline</i>
+    </div>
+    <div class="nd1 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addPolygon()">
+      <i class="material-icons">crop_16_9</i>
+    </div>
+    <div id="floating-button" class="flex-new" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="newmail()">
+      <p class="plus flex-new">+</p>
+      <i class="material-icons edit custom" style="display:flex; justify-content:center">keyboard_arrow_left</i>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
