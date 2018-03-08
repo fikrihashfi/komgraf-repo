@@ -31,7 +31,7 @@ function drawGrid() {
     strokeWeight(0.4);
     line(0, i, 1200, i);
     line(i, 0, i, 550);
-    textSize(10); 
+    textSize(10);
     fill(0);
     text(-600+i,i,275);
     text(275-i,600,i);
@@ -59,7 +59,7 @@ function addPolygon() {
   var vertextTotal = null;
   while (!vertextTotal) {
     var temp = prompt("Masukan Jumlah Vertext");
-    if (temp >= 7) {
+    if (temp > 7) {
       alert("Maksimal Vertex = 7");
     } else if (temp <= 2) {
       alert("Vertex minimal 3 untuk membentuk sebuah bentuk")
