@@ -31,6 +31,10 @@ function drawGrid() {
     strokeWeight(0.4);
     line(0, i, 1200, i);
     line(i, 0, i, 550);
+    textSize(10); 
+    fill(0);
+    text(-600+i,i,275);
+    text(275-i,600,i);
   }
 }
 
