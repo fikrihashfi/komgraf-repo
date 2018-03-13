@@ -24,8 +24,8 @@ class Line{
         let _x2 = this.lineList[i][2];
         let _y2 = this.lineList[i][3];
         textSize(16);
-        let coor1 = "("+_x1+","+_y1+")";
-        let coor2 = "("+_x2+","+_y2+")";
+        let coor1 = "("+_x1/50+","+_y1/50+")";
+        let coor2 = "("+_x2/50+","+_y2/50+")";
         text(coor1,_x1,-_y1);
         text(coor2,_x2,-_y2);
         line(_x1,-_y1,_x2,-_y2)

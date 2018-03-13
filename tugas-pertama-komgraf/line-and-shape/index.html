@@ -18,6 +18,8 @@
   <!-- Resource js -->
   <script type="text/javascript" src="js/line.js"></script>
   <script type="text/javascript" src="js/polygon.js"></script>
+  <script type="text/javascript" src="js/point.js"></script>
+  <script type="text/javascript" src="js/ellipse.js"></script>
 
   <!-- Handler.js -->
   <script type="text/javascript" src=handler.js></script>
@@ -39,7 +41,7 @@
 
   <div id="header-container" class="flex">
     <div class="caption flex">
-      <h1 class="caption-value">Garis Dan Bentuk</h1>
+      <h1 class="caption-value">Tugas 2 Komgraf</h1>
     </div>
     <div class="separator">
     </div>
@@ -54,6 +56,19 @@
   </div>
 
   <div id="item-container" class="flex">
+
+    <div id="point-card" class="flex">
+      <h2 class="card-caption">Point 1</h2>
+      <div class="separator-card">
+      </div>
+      <div class="point-input-container flex">
+        <input id="point-x1-1" type="number" name="" value="" placeholder="Coordinate x1">
+        <input id="point-y1-1" type="number" name="" value="" placeholder="Coordinate y1">
+      </div>
+      <div class="separator-card">
+      </div>
+      <button id="point-1" type="button" class="btn active btn-custom" onclick="drawPoint(this.id)"><code class="button-caption">DRAW</code></button>
+    </div>
 
     <div id="line-card" class="flex">
       <h2 class="card-caption">Line 1</h2>
@@ -89,14 +104,35 @@
       <button id="poly-1" type="button" class="btn active btn-custom" onclick="drawPoly(this.id)"><code class="button-caption">DRAW</code></button>
     </div>
 
+    <div id="ellipse-card" class="flex">
+      <h2 class="card-caption">Ellipse 1</h2>
+      <div class="separator-card">
+      </div>
+      <div class="ellipse-input-container flex">
+        <input id="ellipse-x-1" type="number" name="" value="" placeholder="Center x">
+        <input id="ellipse-y-1" type="number" name="" value="" placeholder="Center y">
+        <input id="ellipse-d-1" type="number" name="" value="" placeholder="Diameter">
+      </div>
+      <div class="separator-card">
+      </div>
+      <button id="ellipse-1" type="button" class="btn active btn-custom" onclick="drawEllipse(this.id)"><code class="button-caption">DRAW</code></button>
+    </div>
+
+
   </div>
 
   <div id="container-floating">
-    <div class="nd3 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addLine()">
+    <div class="nd3 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addEllipse()">
+      <i class="material-icons">fiber_manual_record</i>
+    </div>
+    <div class="nd2 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addLine()">
       <i class="material-icons">timeline</i>
     </div>
     <div class="nd1 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addPolygon()">
       <i class="material-icons">crop_16_9</i>
+    </div>
+    <div class="nd0 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addPoint()">
+      .
     </div>
     <div id="floating-button" class="flex-new" data-toggle="tooltip" data-placement="left" data-original-title="Create" onclick="newmail()">
       <p class="plus flex-new">+</p>
