@@ -20,6 +20,7 @@
   <script type="text/javascript" src="js/polygon.js"></script>
   <script type="text/javascript" src="js/point.js"></script>
   <script type="text/javascript" src="js/ellipse.js"></script>
+  <script type="text/javascript" src="js/vector.js"></script>
 
   <!-- Handler.js -->
   <script type="text/javascript" src=handler.js></script>
@@ -57,7 +58,7 @@
 
   <div id="item-container" class="flex">
 
-    <div id="point-card" class="flex">
+    <!-- <div id="point-card" class="flex">
       <h2 class="card-caption">Point 1</h2>
       <div class="separator-card">
       </div>
@@ -68,9 +69,9 @@
       <div class="separator-card">
       </div>
       <button id="point-1" type="button" class="btn active btn-custom" onclick="drawPoint(this.id)"><code class="button-caption">DRAW</code></button>
-    </div>
+    </div> -->
 
-    <div id="line-card" class="flex">
+    <!-- <div id="line-card" class="flex">
       <h2 class="card-caption">Line 1</h2>
       <div class="separator-card">
       </div>
@@ -83,9 +84,9 @@
       <div class="separator-card">
       </div>
       <button id="line-1" type="button" class="btn active btn-custom" onclick="drawLine(this.id)"><code class="button-caption">DRAW</code></button>
-    </div>
+    </div> -->
 
-    <div id="polygon-card" class="flex">
+    <!-- <div id="polygon-card" class="flex">
       <h2 class="card-caption">Polygon 1</h2>
       <div class="separator-card">
       </div>
@@ -102,9 +103,9 @@
       <div class="separator-card">
       </div>
       <button id="poly-1" type="button" class="btn active btn-custom" onclick="drawPoly(this.id)"><code class="button-caption">DRAW</code></button>
-    </div>
+    </div> -->
 
-    <div id="ellipse-card" class="flex">
+    <!-- <div id="ellipse-card" class="flex">
       <h2 class="card-caption">Ellipse 1</h2>
       <div class="separator-card">
       </div>
@@ -116,19 +117,34 @@
       <div class="separator-card">
       </div>
       <button id="ellipse-1" type="button" class="btn active btn-custom" onclick="drawEllipse(this.id)"><code class="button-caption">DRAW</code></button>
-    </div>
+    </div> -->
 
+    <!-- <div id="vector-card" class="flex">
+      <h2 class="card-caption">Vector 1</h2>
+      <div class="separator-card">
+      </div>
+      <div class="vector-input-container flex">
+        <input id="vector-x-1" type="number" name="" value="" placeholder="Arah sumbu X">
+        <input id="vector-y-1" type="number" name="" value="" placeholder="Arah sumbu Y">
+      </div>
+      <div class="separator-card">
+      </div>
+      <button id="vector-1" type="button" class="btn active btn-custom" onclick="drawVector(this.id)"><code class="button-caption">DRAW</code></button>
+    </div> -->
 
   </div>
 
   <div id="container-floating">
-    <div class="nd3 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addEllipse()">
-      <i class="material-icons">fiber_manual_record</i>
+    <div class="nd4 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addVector()" >
+      <i class="material-icons">trending_flat</i>
     </div>
-    <div class="nd2 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addLine()">
+    <div class="nd3 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addEllipse()">
+      <i class="material-icons">panorama_fish_eye</i>
+    </div>
+    <div class="nd1 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addLine()">
       <i class="material-icons">timeline</i>
     </div>
-    <div class="nd1 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addPolygon()">
+    <div class="nd2 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addPolygon()">
       <i class="material-icons">crop_16_9</i>
     </div>
     <div class="nd0 nds flex-new" data-toggle="tooltip" data-placement="left" onclick="addPoint()">
