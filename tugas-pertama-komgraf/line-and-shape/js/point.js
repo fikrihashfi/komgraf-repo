@@ -22,7 +22,7 @@ class Point{
         let _x1 = this.pointList[i][0];
         let _y1 = this.pointList[i][1];
         textSize(16);
-        let coor1 = "("+_x1/50+","+_y1/50+")";
+        let coor1 = "("+_x1/gridRatio+","+_y1/gridRatio+")";
         text(coor1,_x1,-_y1);
         ellipse(_x1,-_y1,10);
       }

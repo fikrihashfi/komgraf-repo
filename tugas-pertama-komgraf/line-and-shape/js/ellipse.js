@@ -24,7 +24,7 @@ class Ellipse {
         let _y1 = this.ellipseList[i][1];
         let d = this.ellipseList[i][2];
         textSize(16);
-        let coor1 = "(" + _x1 / 50 + "," + _y1 / 50 + ") , d = " + d/50 + " ";
+        let coor1 = "(" + _x1 / gridRatio + "," + _y1 / gridRatio + ") , d = " + d/gridRatio + " ";
         ellipse(_x1, -_y1, d);
         fill(0);
         text(coor1, _x1-(d/4), -_y1);
