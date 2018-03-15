@@ -38,7 +38,7 @@ class Polygon {
     for (var j = 0; j < listVertex.length; j++) {
       let _x = listVertex[j][0];
       let _y = listVertex[j][1];
-      let str = "(" + _x/gridRatio + "," + _y/gridRatio + ")";
+      let str = "Polygon "+"(" + _x/gridRatio + "," + _y/gridRatio + ")";
       text(str, _x, -_y);
     }
   }
