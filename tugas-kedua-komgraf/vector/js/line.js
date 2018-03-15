@@ -30,6 +30,9 @@ class Line{
         text(coor1,_x1,-_y1);
         text(coor2,_x2,-_y2);
         line(_x1,-_y1,_x2,-_y2)
+        fill(0,0,0);
+        ellipse(_x1,-_y1,5);
+        ellipse(_x2,-_y2,5);
       }
     }
   }
